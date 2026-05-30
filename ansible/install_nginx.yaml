@@ -1,0 +1,15 @@
+---
+- name: install and start enginx
+  hosts: all
+  become: true
+
+  tasks: 
+    - name: install nginx
+      dnf:
+       name: nginx
+       state: present
+
+    - name: start nginx
+      service:
+       name: nginx
+       state: started

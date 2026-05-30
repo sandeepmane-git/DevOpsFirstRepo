@@ -1,0 +1,4 @@
+---
+- name: install enginx
+  hosts: all
+  become: root
